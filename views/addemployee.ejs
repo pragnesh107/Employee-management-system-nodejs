@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <%- include('partials/Navbar.ejs') %>
+    <div class="container-sm">
+    <form action="/api/insert" method="post">
+        <div class="my-4">
+          <label for="fullname" class="form-label">Full Name</label>
+          <input type="text" name="fullname" class="form-control" placeholder="Type your answer here" required>
+        </div>
+        <div class="my-4">
+          <label for="job_title" class="form-label">Job Title</label>
+          <input type="text" name="jobtitle" class="form-control" placeholder="Type your answer here" required>
+        </div>
+        <div class="my-4">
+          <label for="phone_no" class="form-label">Phone Number</label>
+          <input type="number" name="phoneno" class="form-control" placeholder="0000000000" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="johndoe@sample.com" required>
+          </div>
+        <div class="my-4">
+            <div class="row">
+                <div class="col">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" name="address" rows="5" placeholder="Type your answer here"></textarea>          
+                </div>
+                <div class="col">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" name="city" class="form-control" placeholder="Type your answer here" required>
+                </div>
+                <div class="col">
+                    <label for="State" class="form-label">State</label>
+                    <input type="text" name="state" class="form-control" placeholder="Type your answer here" required>
+                </div>
+              </div>
+        </div>
+        <div class="my-4">
+          <label for="pec" class="form-label">Primary Emergency Contact</label>
+          <input type="text" name="pec" class="form-control"  placeholder="John Doe" required>
+        </div>
+        <div class="my-4">
+            <label for="phone_no" class="form-label">Phone Number</label>
+            <input type="number" name="pecno" class="form-control" placeholder="0000000000" required>
+        </div>
+        <div class="my-4">
+            <label for="Relationship" class="form-label">Relationship</label>
+            <input type="text" name="pecrelationship" class="form-control"  placeholder="Type your answer here" required>
+        </div>
+        <div class="my-4">
+          <label for="sec" class="form-label">Secondary Emergency Contact</label>
+          <input type="text" name="sec" class="form-control"  placeholder="John Doe" required>
+        </div>
+        <div class="my-4">
+            <label for="phone_no" class="form-label">Phone Number</label>
+            <input type="number" name="secno" class="form-control" placeholder="0000000000" required>
+        </div>
+        <div class="my-4">
+            <label for="Relationship" class="form-label">Relationship</label>
+            <input type="text" name="secrelationship" class="form-control"  placeholder="Type your answer here" required>
+        </div>
+        <div class="d-flex justify-content-center my-4">
+            <button type="submit" class="btn btn-primary text-right">Submit</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
